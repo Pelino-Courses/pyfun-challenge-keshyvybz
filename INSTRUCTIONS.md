@@ -74,7 +74,18 @@ Create a Python module for inventory management:
 **Files to submit:**
 - `product.py`
 - `inventory_demo.py` (optional demonstration script)
-
+**Folder:** `task4-basic-oop/`
+ 
+ Create a Python module for inventory management:
+ - Implement a `Product` class with appropriate attributes and methods
+ - Include validation for inputs and proper error handling
+ - Feature comprehensive docstrings for the class and its methods
+ - Demonstrate encapsulation principles
+ 
+ **Files to submit:**
+ - `product.py`
+ - `inventory_demo.py` (optional demonstration script)
+ 
 ## Task 5: Inheritance and Method Overriding
 **Folder:** `task5-inheritance/`
 
