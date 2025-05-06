@@ -19,7 +19,7 @@ def get_date(prompt):
 
 def main():
     """
-    Main function to interact with the user, take two dates as input,
+    Main function to interact with the user,input two dates as input 
     and print the number of days between them.
     """
     print("Let's find out how many days are between two dates.")
@@ -32,3 +32,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+_
