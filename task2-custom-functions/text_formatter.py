@@ -22,10 +22,17 @@ def format_text(text, prefix="", suffix="", capitalize=False, max_length=None):
     # Applying a transformations
     if capitalize:
         text = text.capitalize()
-
-    result = f"{prefix}{text}{suffix}"
-
-    if max_length is not None:
-        result = result[:max_length]
-
-    return result
+        text = text[:max_length]
+        result = f"{prefix}{text}{suffix}"
+        return result
+    else : 
+        text = text[:max_length]
+        result = f"{prefix}{text}{suffix}" 
+        return result
+    
+text=input("pleasea enter a world to deal with :")
+prefix = input("Prefix: ")
+suffix = input("Suffix: ")
+option = input("Capitalize(True/False)").capitalize()
+length = int(input("Length to print: "))
+print(format_text(text, prefix, suffix, option, length))
