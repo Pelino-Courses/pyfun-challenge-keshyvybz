@@ -5,31 +5,21 @@ definition of the product class for managing inventory in invetory system
 
 class Product:
     """
-    a class for representing aproduct in investory 
-    Attributes:
-    name : str
-        the product name .
-    price : float
-       the price per unit product which must not  include a negative 
-       the avalaible quantity in the stock  .
+    THIS IS ACLASS FOR REPRESENTING A PRODUCT IN INVESTORY .
     """
 
     def __init__(self, name: str, price: float, quantity: int):
         """
-        Initializes a Product object with name, price, and quantity.
-
-        Raises:
-        ------
-        ValueError:
-            If price or quantity is negative.
+        THIS IS INITIALISING A PRODUCT OBJECT WITH NAME ,PRICE AND QUANTITY
         """
+       
         self._name = name
         self.price = price
         self.quantity = quantity
 
     @property
     def name(self) -> str:
-        """Returns the name of the product."""
+        """outputs the name of the product."""
         return self._name
 
     @property
@@ -58,13 +48,6 @@ class Product:
         """
         addition of the invetory quantity.
 
-        Parameters:
-        amount : int
-         Amount to add (must be positive).
-
-        Raises:
-        ValueError:
-            If amount is not positive.
         """
         if amount <= 0:
             raise ValueError("Amount to add must be positive.")
@@ -72,15 +55,8 @@ class Product:
 
     def remove_inventory(self, amount: int):
         """
-        Removes from the inventory quantity.
+        removes fromm the investory quantity.
 
-        Parameters:
-        amount : int
-            Amount to remove (must be positive and not exceed current quantity).
-
-        Raises:
-        ValueError:
-            If amount is invalid or exceeds available quantity.
         """
         if amount <= 0:
             raise ValueError("Amount to remove must be positive.")
@@ -91,22 +67,16 @@ class Product:
     def total_value(self) -> float:
         """
         Calculates total value of product in stock.
-        Returns:
-        float
-            Total value (price × quantity).
+       
         """
         return self.price * self.quantity
 
     def display_info(self) -> str:
         """
-        Returns a formatted string of product details.
-        Returns:
-    
-        str
-            Product summary.
+        Returns a changed string of product details. 
         """
         return (
-            f"Product: {self.name}, "
+            f"product :{self.name}"
             f"Price: ${self.price:.2f}, "
             f"Quantity: {self.quantity}, "
             f"Total Value: ${self.total_value():.2f}"
